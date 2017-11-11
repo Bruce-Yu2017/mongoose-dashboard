@@ -1,0 +1,11 @@
+<h1>Display all of the mongooses</h1>
+<% if (typeof(gooses) != "undefined") { %>
+    <% for(var x in gooses) { %>
+    <h3>Goose's name: <a href="/mongooses/<%= gooses[x]._id %>"><%= gooses[x].name %></a></h3>
+    <form action="/mongooses/destroy/<%= gooses[x]._id %>" method="post">
+    <input type="submit" value="Delete">
+    </form>
+    <hr>
+    <%}%>
+<%}%>
+<a href="/mongooses/new"><button>Add a new mongooses</button></a>

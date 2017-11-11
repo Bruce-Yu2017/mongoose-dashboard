@@ -1,0 +1,6 @@
+<h1>Edit <%= gooses.name %></h1>
+<form action="/mongooses/<%= gooses._id %>" method="post">
+    Name: <input type="text" name="name" value="<%= gooses.name %>"><br>
+    Creater: <input type="text" name="creater" value="<%= gooses.creater %>"><br>
+    <input type="submit" value="Edit!">
+</form>
